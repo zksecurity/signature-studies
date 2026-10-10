@@ -9,7 +9,7 @@ Start in the repository discussion board to coordinate contributions:
 - [Repository Discussions](https://github.com/zksecurity/signature-security-lean/discussions): Read existing threads, then discuss your proposed work or share a review. Include the relevant declaration, source revision, assumptions, and evidence when reporting results.
 - [Repository](https://github.com/zksecurity/signature-security-lean): Follow the current repository contribution and review instructions.
 - [Lean readers](read/): Inspect the four existing theorem statements, conditions, and saved compiler reports.
-- [lean-agm](https://github.com/zksecurity/lean-agm): The separate Apache-2.0 algebraic group model library for Lean 4 and VCVio that the AGM results use. Read its README for the explanation rule and its stated limits.
+- [agm-lean](https://github.com/zksecurity/agm-lean): The separate Apache-2.0 algebraic group model library for Lean 4 and VCVio that the AGM results use. Read its README for the explanation rule and its stated limits.
 
 ## Open problems
 

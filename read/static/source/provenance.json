@@ -1,7 +1,7 @@
 [
   {
     "key": "bls",
-    "revision": "7ee3af67a119db35b9d87f1077d497360efdaab2",
+    "revision": "435ddd5021c9e8dc27fe4c1fe8cd1eb87bba5390",
     "lean": "4.34.0",
     "module": "Signatures.BLS.Statement",
     "file": "Signatures/BLS/Statement.lean",
@@ -15,7 +15,7 @@
   },
   {
     "key": "oops",
-    "revision": "7ee3af67a119db35b9d87f1077d497360efdaab2",
+    "revision": "435ddd5021c9e8dc27fe4c1fe8cd1eb87bba5390",
     "lean": "4.34.0",
     "module": "Signatures.OOPS.Statement",
     "file": "Signatures/OOPS/Statement.lean",
@@ -28,7 +28,7 @@
   },
   {
     "key": "proximity",
-    "revision": "7ee3af67a119db35b9d87f1077d497360efdaab2",
+    "revision": "435ddd5021c9e8dc27fe4c1fe8cd1eb87bba5390",
     "lean": "4.34.0",
     "module": "Signatures.Proximity.Statement",
     "file": "Signatures/Proximity/Statement.lean",

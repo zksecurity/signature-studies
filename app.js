@@ -54,7 +54,7 @@ const routes = {
   }
 };
 // Each step links to the Lean definition it describes, at the revision the theorems were checked at.
-const sourceBase = 'https://github.com/zksecurity/signature-security-lean/blob/7ee3af67a119db35b9d87f1077d497360efdaab2/Signatures/';
+const sourceBase = 'https://github.com/zksecurity/signature-security-lean/blob/435ddd5021c9e8dc27fe4c1fe8cd1eb87bba5390/Signatures/';
 const lean = (label, file, from, to) => ({ label, href: `${sourceBase}${file}#L${from}-L${to}` });
 const agmModel = 'Model/LazyAGM.lean', cocdhGame = 'BLS/CoCDH/Spec/LazyGame.lean';
 const schemeTerms = {
