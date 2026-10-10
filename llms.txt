@@ -1,4 +1,4 @@
-# Signature Studies
+# Signatures Formalized
 
 > A collaborative, open-source Lean formalization of BLS, OOPS, and Proximity Signatures. Review and development are in progress.
 

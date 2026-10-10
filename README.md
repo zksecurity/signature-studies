@@ -1,4 +1,4 @@
-# Signature Studies
+# Signatures Formalized
 
 The built website for [signature-security-lean](https://github.com/zksecurity/signature-security-lean), a Lean formalization of BLS, OOPS, and Proximity Signatures security, and [lean-agm](https://github.com/zksecurity/lean-agm).
 
