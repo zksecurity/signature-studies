@@ -1,0 +1,61 @@
+/* Daylight Arcana: reusable defaults. Fonts are not downloaded by this file. */
+:root {
+  --da-paper: #f8f8ef;
+  --da-cloud: #ffffff;
+  --da-fern-mist: #e3f0d8;
+  --da-sky: #dceffa;
+  --da-water: #d9efe9;
+  --da-butter: #f6e7a7;
+  --da-lilac: #e9e2f5;
+  --da-ink: #203c35;
+  --da-ink-muted: #4b6258;
+  --da-fern: #28634d;
+  --da-sky-ink: #285e80;
+  --da-plum: #654f7d;
+  --da-ochre: #7a4a18;
+  --da-error: #913f3f;
+  --da-divider: #c7d7c9;
+  --da-control-border: #657d70;
+
+  --da-bg: var(--da-paper);
+  --da-surface: var(--da-cloud);
+  --da-text: var(--da-ink);
+  --da-text-secondary: var(--da-ink-muted);
+  --da-action: var(--da-fern);
+  --da-action-text: var(--da-cloud);
+  --da-link: var(--da-sky-ink);
+  --da-focus: var(--da-sky-ink);
+  --da-status-checked: var(--da-fern);
+  --da-status-conditional: var(--da-ochre);
+
+  --da-font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --da-font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --da-font-code: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --da-title-size: clamp(2.5rem, 1.35rem + 4.5vw, 5.5rem);
+  --da-body-size: clamp(1.0625rem, 1rem + 0.2vw, 1.25rem);
+  --da-body-leading: 1.6;
+  --da-reading-width: 68ch;
+  --da-content-width: 75rem;
+
+  --da-space-1: 0.25rem;
+  --da-space-2: 0.5rem;
+  --da-space-3: 0.75rem;
+  --da-space-4: 1rem;
+  --da-space-6: 1.5rem;
+  --da-space-8: 2rem;
+  --da-space-12: 3rem;
+  --da-space-16: 4rem;
+  --da-section-space: clamp(3.5rem, 7vw, 7rem);
+  --da-page-gutter: clamp(1.25rem, 4vw, 4rem);
+  --da-radius-control: 0.75rem;
+  --da-radius-panel: 1.5rem;
+  --da-shadow: 0 12px 40px rgb(32 60 53 / 8%);
+  --da-duration: 200ms;
+  --da-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --da-duration: 0ms;
+  }
+}

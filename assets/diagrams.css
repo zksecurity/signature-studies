@@ -1,0 +1,21 @@
+/* Reading diagrams: labeled relationships with a vertical mobile layout. */
+.flow-diagram{margin:32px 0;padding:26px;border:1px solid #bdcfca;border-radius:12px;background:linear-gradient(120deg,#eef7ef,#edf3fc 60%,#f1ebf8)}
+.flow-diagram figcaption{font-size:14px;font-weight:600;line-height:1.5;margin-bottom:22px}
+.diagram-chain{display:flex;align-items:stretch;gap:12px;min-width:0}
+.diagram-node{flex:1;min-width:0;background:#fffaf1cc;border:1px solid #b8cbd0;border-radius:8px;padding:17px}
+.diagram-node strong{display:block;font-size:16px;font-weight:600;line-height:1.35;margin-bottom:8px}
+.diagram-node p{font-size:14px!important;line-height:1.5;color:var(--da-ink-muted);margin:0!important}
+.diagram-node code{font-size:12px}
+.diagram-edge{align-self:center;flex:0 0 70px;text-align:center;color:var(--da-ink-muted);font-size:14px;line-height:1.4}
+.diagram-edge::after{content:"→";display:block;font-size:25px;line-height:1.2;color:#617588;margin-top:5px}
+.diagram-caption{font-size:14px!important;line-height:1.6;margin-top:20px!important;color:var(--da-ink-muted)}
+.diagram-caption code{font-size:12px}
+.diagram-return{margin-top:15px;padding:11px 15px;border:1px dashed #a997b9;border-radius:6px;color:#60476d;background:#f0e8f755;font-size:14px;line-height:1.6}
+.query-flow{display:grid;grid-template-columns:1fr 90px 1fr;gap:12px;align-items:center;margin:0 0 22px;border-top:1px solid var(--da-divider);border-bottom:1px solid var(--da-divider);padding:18px 0}
+.query-flow strong{font-size:14px;display:block}.query-flow p{font-size:14px;line-height:1.5;margin:4px 0 0;color:var(--da-ink-muted)}
+.query-arrows{font-size:14px;text-align:center;color:#5d5275}.query-arrows span{display:block;font-size:20px;line-height:1.3}
+.mechanism-panel h3{font-size:29px}.mechanism-panel>div>p{font-size:17px;line-height:1.6}
+.technical-note{font:15px/1.6 var(--da-font-body);padding:22px 25px;background:#edf3f1;border:1px solid var(--da-divider);border-radius:8px;margin:0 0 40px}
+.technical-note strong{display:block;margin-bottom:6px;font-weight:600}.technical-note p{font-size:15px;color:var(--da-ink-muted)}
+@media(max-width:1000px){.diagram-chain{gap:8px}.diagram-edge{flex-basis:48px}.diagram-node{padding:14px}}
+@media(max-width:760px){.flow-diagram{padding:21px}.diagram-chain{flex-direction:column;gap:10px}.diagram-edge{flex-basis:auto;max-width:none}.diagram-edge::after{content:"↓"}.diagram-node strong{font-size:16px}.query-flow{grid-template-columns:1fr 70px 1fr;gap:8px}}

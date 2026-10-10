@@ -1,0 +1,42 @@
+[
+  {
+    "key": "bls",
+    "revision": "b0b0230a19b0a157522d014bbea205c6098615a0",
+    "lean": "4.34.0",
+    "module": "Signatures.BLS.Statement",
+    "file": "Signatures/BLS/Statement.lean",
+    "sha256": "abb8456ae0c7888988ba69a7fc1951ba29575177b9cdc72f99672be52ab0c729",
+    "declarations": [
+      "BLS.Statement.bls_eufcma_of_cocdh_machine_hardness",
+      "BLS.Statement.bls_lazy_agm_of_dlog_machine_hardness"
+    ],
+    "axioms": "'BLS.Statement.bls_eufcma_of_cocdh_machine_hardness' depends on axioms: [propext, Classical.choice, Quot.sound]\n'BLS.Statement.bls_lazy_agm_of_dlog_machine_hardness' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "compileOutput": ""
+  },
+  {
+    "key": "oops",
+    "revision": "b0b0230a19b0a157522d014bbea205c6098615a0",
+    "lean": "4.34.0",
+    "module": "Signatures.OOPS.Statement",
+    "file": "Signatures/OOPS/Statement.lean",
+    "sha256": "91f181bc91f10639e29989a8f653da61ac192d1d619e5a9f21b5069ef65a73e2",
+    "declarations": [
+      "OOPS.Statement.oops_lazy_agm_of_dlog_machine_hardness"
+    ],
+    "axioms": "'OOPS.Statement.oops_lazy_agm_of_dlog_machine_hardness' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "compileOutput": ""
+  },
+  {
+    "key": "proximity",
+    "revision": "b0b0230a19b0a157522d014bbea205c6098615a0",
+    "lean": "4.34.0",
+    "module": "Signatures.Proximity.Statement",
+    "file": "Signatures/Proximity/Statement.lean",
+    "sha256": "726efd4184ecb0d669d5c8b05b9e7d6895a1aff0cb035dce190b8e0e79821fd2",
+    "declarations": [
+      "Proximity.Statement.proximity_lazy_agm_of_dlog_machine_hardness"
+    ],
+    "axioms": "'Proximity.Statement.proximity_lazy_agm_of_dlog_machine_hardness' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+    "compileOutput": ""
+  }
+]

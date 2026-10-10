@@ -1,0 +1,79 @@
+/* Daylight Arcana: abstract spirits and full-page pastel surfaces. */
+body{background:#edf3fc;background-image:linear-gradient(155deg,#e6f3f9 0%,#efe6fa 23%,#e4f3ec 46%,#e9edfc 70%,#f8e9ef 100%)}
+.site-header{border-color:#bbc7d9}
+.brand-mark{background:#e0d9f4;color:#53436b}
+.nav .nav-cta{background:#e4dcf6;border-color:#8b7e9e}
+.hero h1 em,.signature .hero h1 em{color:#665485}
+.hero-art::before{background:conic-gradient(from 30deg,#cfe8fa,#ded1f3,#d2eddf,#cfe8fa);opacity:.7}
+.floating-note{background:#f5edfff2;border:1px solid #cbbede;box-shadow:0 8px 25px #62527812}
+.ribbon{padding:22px 24px;background:#e3ddf3;border-color:#c7bbdc;border-radius:14px}
+.button{background:#ddd2ef;border-color:#827291;color:#3e3154}
+.button:hover{background:#cdbde5;color:#302442}
+.button.secondary{background:#daebe8;color:#294b47;border-color:#6c8a80}
+.button.secondary:hover{background:#c4dfd6}
+/* The tide slides a wash layer sideways by transform, so it never repaints. The wash only varies left to right
+   and drifts horizontally, so a band that grows (e.g. a longer walkthrough step) doesn't shift it mid-animation. */
+.band{position:relative;isolation:isolate;overflow:hidden;border-color:#bfced6;--band-wash:linear-gradient(90deg,#d9ede2c9,#daeafab8 58%,#e6d9f5c9)}
+.band.blue{border-color:#c6c5df;--band-wash:linear-gradient(90deg,#dceafbc9,#e3d9f4b8 65%,#d9eee7c9)}
+.band.water{border-color:#bacfc9;--band-wash:linear-gradient(90deg,#d8efe5c9,#e1e7fbb8 52%,#e9dcf5c9)}
+.band::before{content:"";position:absolute;left:0;top:0;bottom:0;width:220%;z-index:-1;pointer-events:none;background:var(--band-wash);animation:pastel-tide 25s ease-in-out infinite alternate}
+@keyframes pastel-tide{from{transform:translateX(0)}to{transform:translateX(-54.55%)}}
+.card{background:#e1eee8;border-color:#b9cec3;border-radius:20px}
+.tint-green{background:#e1eee8;border-color:#b9cec3}
+.tint-lilac{background:#e9def5;border-color:#cabbdc}
+.tint-blue{background:#ddeafb;border-color:#b8cbe0}
+.tint-yellow{background:#f6efd6;border-color:#d9c98f}
+.theorem{padding:28px;background:#e0edf6;border:1px solid #bccdda;border-radius:20px}
+.theorem:nth-child(2){background:#e7ddf2;border-color:#c7b9d7}
+.theorem:nth-child(3){background:#dfeee6;border-color:#b9cebf}
+.theorem:nth-child(4){background:#f4e3ec;border-color:#d6bfca}
+.theorem .formula,.theorem:nth-child(2) .formula,.theorem:nth-child(3) .formula{background:#ffffff65;color:#304754}
+.journey{gap:18px}
+.journey-step{background:#dfeee7;border:1px solid #b9cebf;border-radius:20px;padding:23px}
+.journey-step:nth-child(2){background:#e0eafb;border-color:#bccce2}
+.journey-step:nth-child(3){background:#e9ddf5;border-color:#c5b7d7}
+.journey-step:nth-child(4){background:#f2e3ed;border-color:#d3bfcb}
+.journey-step h3{margin-top:20px}
+.tabs{background:#f5efff80;border-color:#aaa0be}
+.tabs button[aria-pressed=true]{background:#d6c5ed;color:#3f3153;box-shadow:inset 0 0 0 1px #85709f}
+.game-stage,.explorer,.cache-demo{background:#f0edfa;border-color:#bcb3d2;border-radius:20px}
+.actor{background:#e5eafa;border-color:#bbc4d9}
+.actor.active{background:#d4e9df;border-color:#678576;box-shadow:inset 0 0 0 1px #678576}
+.actor.adversary.active{background:#dfcff1;border-color:#8a6d9f}
+.transcript .code-line{background:#dfe9f8}
+.step-controls button{background:#e2daef}
+.step-controls button:disabled{opacity:.6}
+.mechanism-panel{background:#eaf2ee99;border:1px solid #becfc7;border-radius:20px;padding:28px}
+.mechanism-panel h3{font-size:29px}
+.flow-diagram{background:linear-gradient(120deg,#dceee3,#dfe9fa 60%,#e6d9f4);border-color:#b7c7c5;border-radius:20px}
+.diagram-node{background:#f4f0fbcc;border-color:#a4b3c5}
+.details-list details{padding:22px 24px;background:#e3eafa;border:1px solid #c0cbe0;border-radius:16px;margin:12px 0}
+.details-list details:nth-child(even){background:#e9e1f4;border-color:#c9bddb}
+.details-list details[open]{background:#e1eee6;border-color:#aec8b8}
+.details-list details p{line-height:1.65}
+.site-tile{background:#e0ede7;border-color:#b9cec3;border-radius:22px}
+.site-tile:nth-child(2){background:#e8dff4;border-color:#c8bbda}
+.site-tile:nth-child(3){background:#e0eafa;border-color:#bdcce0}
+.footer{border-color:#bcbcd0}
+.section{padding-top:64px;padding-bottom:64px}
+.section-heading{margin-bottom:28px}
+.hero-copy>p{max-width:38ch}
+@media(max-width:1000px){.journey{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.ribbon{padding:18px}.theorem{padding:23px;margin-bottom:15px}.mechanism-panel{padding:22px}.journey-step{padding:20px}.details-list details{padding:20px}}
+@media(max-width:420px){.journey{grid-template-columns:1fr}.journey-portrait{height:110px}.journey-step h3{margin-top:14px}}
+
+/* Give the spirits a distinct foreground while retaining the pastel palette. */
+.explorer .example-equation{padding:16px;margin-top:20px;background:#e0e9f5;border-radius:10px;color:#304754;overflow-wrap:anywhere}
+.example-source{margin-top:22px;border-top:1px solid #bbc7d9;padding-top:14px}
+.example-source summary{font-size:14px}
+.example-source code{overflow-wrap:anywhere}
+:root{--creature-relief:contrast(1.12) saturate(1.16) drop-shadow(0 0 2px #fffdf5) drop-shadow(0 7px 5px #51416d35)}
+.hero-art>img:first-child{width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;object-position:center;border-radius:32px;border:3px solid #fffaf0;background:#e2e5f7;filter:contrast(1.06) saturate(1.12);box-shadow:0 2px 0 #a99dbb,0 18px 38px #57457530}
+.hero-art::before{filter:blur(30px)}
+.margin-creature{width:min(280px,85%);height:300px}
+.margin-creature img,.journey-portrait{filter:var(--creature-relief)}
+.site-tile>img{filter:contrast(1.06) saturate(1.12);height:auto;aspect-ratio:3/2;object-fit:contain}
+@media(max-width:760px){
+  .margin-creature{width:min(230px,85%);height:200px}
+}
+@media(max-width:400px){.actor-portrait{height:96px}}

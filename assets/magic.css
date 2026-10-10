@@ -1,0 +1,66 @@
+/* A little more daylight, a little more otherworld. */
+body{isolation:isolate}
+body>.wrap,body>main,body>.band{position:relative;z-index:1}
+.page-atmosphere{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0;contain:strict}
+/* Full-size layers: drawing them small and scaling up made GPU browsers re-render mid-animation, which showed as jumps. */
+.ambient-ribbon{position:absolute;display:block;width:min(95vmax,1400px);height:min(85vmax,1250px);border-radius:44% 56% 61% 39% / 55% 40% 60% 45%;opacity:.78;filter:blur(38px);transform-origin:48% 52%;animation:sky-swirl 26s linear infinite}
+.ribbon-0{left:-28%;top:-42%;background:conic-gradient(from 30deg at 45% 48%,#b0dff200 0deg,#a9d7f2 65deg,#c7bef0 135deg,#dfeaf500 220deg,#b4e4dd 300deg,#b0dff200 360deg)}
+.ribbon-1{right:-30%;top:-3%;background:conic-gradient(from 150deg at 54% 46%,#d8bbee00 0deg,#c6adeb 75deg,#e6c2e5 150deg,#eae1f700 225deg,#bad8f3 300deg,#d8bbee00 360deg);animation-delay:-11s;animation-duration:34s;animation-direction:reverse}
+.ribbon-2{left:-18%;bottom:-48%;background:conic-gradient(from 250deg at 48% 55%,#bae8d000 0deg,#afe0c7 65deg,#b4e1ea 145deg,#e2f3e800 230deg,#d8c6ed 300deg,#bae8d000 360deg);animation-delay:-7s;animation-duration:30s}
+.page-atmosphere::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,#f6f5ff40,transparent 70%)}
+.ambient-mote{position:absolute;left:var(--x);top:var(--y);width:5px;height:5px;border-radius:50%;background:#fff9db;box-shadow:0 0 12px 4px #cfb9f050;animation:ambient-drift var(--time) ease-in-out infinite alternate;animation-delay:var(--delay)}
+.ambient-mote:nth-child(3n){background:#ad9bcd;width:3px;height:3px}.ambient-mote:nth-child(4n){background:#91c9b5}
+.pointer-sparks{position:fixed;inset:0;z-index:4;pointer-events:none;overflow:hidden;contain:strict}
+.pointer-spark{position:absolute;display:none;width:10px;height:10px;background:#fef5cd;clip-path:polygon(50% 0,62% 37%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);opacity:0}
+.pointer-spark:nth-child(3n){background:#cab7e8}.pointer-spark:nth-child(3n+1){background:#a5d7c4}
+.pointer-spark.is-lit{display:block;animation:pointer-spark-rise 1.25s ease-out forwards}
+.hero-art::after{content:"";position:absolute;inset:-13px -11px 32px;border:1px solid #a895c47a;border-radius:48% 51% 45% 49%;z-index:-1;pointer-events:none;animation:orbit-outline 24s ease-in-out infinite alternate}
+.journey-portrait{animation:creature-hover 8s ease-in-out infinite}.journey-step:nth-child(2) .journey-portrait{animation-delay:-3s}.journey-step:nth-child(3) .journey-portrait{animation-delay:-5s}
+.document-resting *,.document-resting *::before,.document-resting *::after{animation-play-state:paused!important}
+@keyframes sky-swirl{0%{transform:translate3d(0,0,0) rotate(0deg) scale(1)}25%{transform:translate3d(5vw,4vh,0) rotate(90deg) scale(1.06)}50%{transform:translate3d(0,8vh,0) rotate(180deg) scale(1)}75%{transform:translate3d(-5vw,4vh,0) rotate(270deg) scale(.96)}100%{transform:translate3d(0,0,0) rotate(360deg) scale(1)}}
+@keyframes ambient-drift{0%{transform:translate(0,30px);opacity:.3}50%{opacity:.8}100%{transform:translate(var(--drift),-95px);opacity:.4}}
+@keyframes pointer-spark-rise{0%{transform:translate(-50%,-50%) scale(.45);opacity:.8}35%{opacity:.8}100%{transform:translate(-50%,-38px) rotate(60deg) scale(.1);opacity:0}}
+@keyframes orbit-outline{from{transform:rotate(-3deg) scale(.98);opacity:.4}to{transform:rotate(4deg) scale(1.025);opacity:.8}}
+@media(max-width:760px){.ambient-ribbon{opacity:.66;filter:blur(28px);animation-duration:34s}.ambient-mote:nth-child(even){display:none}.pointer-sparks{display:none}}
+@media(prefers-reduced-motion:reduce){.pointer-sparks,.ambient-mote{display:none}.ambient-ribbon{animation:none!important;opacity:.35}.hero-art::after{animation:none!important}}
+:root{--magic-blue:#dcefff;--magic-lilac:#eae0fa;--magic-mint:#def4e7}
+.hero-art{isolation:isolate}
+.hero-art::before{content:"";position:absolute;inset:-24px -18px 35px;border-radius:48%;z-index:-1;background:conic-gradient(from 30deg,#d6eefa99,#e6d9f6aa,#d9efddaa,#d6eefa99);filter:blur(23px);animation:halo-breathe 10s ease-in-out infinite alternate;pointer-events:none}
+.card{position:relative;overflow:hidden}
+/* Only cards that are links lift on hover. */
+a.card{color:inherit;text-decoration:none;transition:transform 250ms,box-shadow 250ms}
+a.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px #637b8d14}
+.card-creature{width:100%;height:180px;object-fit:contain;align-self:center;margin:-8px 0 12px;pointer-events:none;filter:var(--creature-relief);background:radial-gradient(ellipse at center,#fffaf0 25%,#fffaf0b3 48%,#fffaf000 70%)}
+.margin-creature{margin:24px 0 0;width:min(240px,65%);height:190px;position:relative}
+.margin-creature img{height:100%;width:100%;object-fit:contain;filter:drop-shadow(0 10px 18px #516d7512)}
+.closing{position:relative;padding-right:190px;max-width:1040px}
+.closing .margin-creature{position:absolute;right:0;bottom:65px;width:210px;height:220px;margin:0}
+.floaty{animation:creature-hover 7s ease-in-out infinite;animation-delay:-2s}
+/* A decorative companion outside the hero frame: pointer hover or tap only, never a tab stop. */
+.familiar{position:absolute;z-index:3;right:-28px;bottom:-62px;width:110px;height:110px}
+.familiar img{width:100%;height:100%;object-fit:contain;filter:var(--creature-relief);animation:creature-hover 6s ease-in-out infinite}
+.familiar.is-greeting img{animation:familiar-greet 900ms ease-in-out}
+.actor-portrait{width:100%;height:150px;margin:-4px auto 3px;object-fit:contain;filter:var(--creature-relief);transition:transform .35s}
+.actor.active .actor-portrait{transform:translateY(-5px)}
+.actor{transition:background .4s,border-color .4s;position:relative}
+.actor.active::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#ae92d2;bottom:-14px;left:calc(50% - 4px);box-shadow:0 0 10px #ae92d266}
+.journey-step:nth-child(2){border-color:#a792be}.journey-step:nth-child(3){border-color:#8caec5}
+.journey-portrait{width:100%;height:125px;object-fit:contain;margin:10px 0 -10px}
+.theorem:nth-child(2) .formula,.theorem:nth-child(3) .formula{background:#eee8f6}
+.game-stage,.explorer,.cache-demo{box-shadow:0 14px 40px #60839d0c}
+.motion-paused *,.motion-paused *::before,.motion-paused *::after{animation-play-state:paused!important}
+.motion-paused .familiar img{animation:none!important}
+.motion-paused a.card,.motion-paused .actor-portrait,.motion-paused .cache-node{transition:none}
+.motion-paused a.card:hover,.motion-paused .actor.active .actor-portrait{transform:none}
+.magic-motes{position:absolute;inset:8px 2px 45px;overflow:hidden;border-radius:180px 180px 12px 12px;pointer-events:none;z-index:2}
+.magic-motes i{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);border-radius:50%;background:var(--color);box-shadow:0 0 12px var(--color);opacity:.65;animation:mote-drift var(--time) ease-in-out infinite alternate;animation-delay:var(--delay)}
+.pointer-glow{position:absolute;inset:0;pointer-events:none;z-index:1;border-radius:inherit;background:radial-gradient(circle 125px at var(--pointer-x,50%) var(--pointer-y,50%),#ece0ff55,transparent 75%);opacity:0;transition:opacity .35s}
+.hero-art:hover .pointer-glow{opacity:1}
+.motion-paused .pointer-glow{display:none}
+.footer{padding-bottom:75px}
+@keyframes creature-hover{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-9px) rotate(1.2deg)}}
+@keyframes familiar-greet{0%,100%{transform:translateY(0) rotate(0)}30%{transform:translateY(-18px) rotate(-10deg)}65%{transform:translateY(-10px) rotate(9deg)}}
+@keyframes mote-drift{from{transform:translate(0,0);opacity:.35}to{transform:translate(14px,-24px);opacity:.8}}
+@keyframes halo-breathe{from{opacity:.55;transform:scale(.97)}to{opacity:.9;transform:scale(1.025)}}
+@media(max-width:760px){.familiar{right:-4px;bottom:-38px;width:88px;height:88px}.margin-creature{width:175px;height:145px;margin-top:18px}.closing{padding-right:0}.closing .margin-creature{position:relative;bottom:auto;right:auto;width:160px;height:160px;margin:18px auto 0}.actor-portrait{width:100%;height:120px}.journey-portrait{height:110px}.hero-art::before{inset:-12px -6px 28px}.magic-motes{inset:10px 0 45px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.pointer-glow{display:none}a.card:hover,.actor.active .actor-portrait{transform:none}}

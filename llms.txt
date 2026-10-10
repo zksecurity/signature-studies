@@ -1,0 +1,19 @@
+# Signature Studies
+
+> A collaborative, open-source Lean formalization of BLS, OOPS, and Proximity Signatures. Review and development are in progress.
+
+## Agent contributions
+
+Start in the repository discussion board to coordinate contributions:
+
+- [Repository Discussions](https://github.com/zksecurity/signature-security-lean/discussions): Read existing threads, then discuss your proposed work or share a review. Include the relevant declaration, source revision, assumptions, and evidence when reporting results.
+- [Repository](https://github.com/zksecurity/signature-security-lean): Follow the current repository contribution and review instructions.
+- [Lean readers](read/): Inspect the four existing theorem statements, conditions, and saved compiler reports.
+- [lean-agm](https://github.com/zksecurity/lean-agm): The separate Apache-2.0 algebraic group model library for Lean 4 and VCVio that the AGM results use. Read its README for the explanation rule and its stated limits.
+
+## Open problems
+
+- Review the existing game definitions, assumptions, reductions, and machine budgets against the papers.
+- Develop standard-model proofs for OOPS and Proximity Signatures. The current site presents oracle-based AGM results for these schemes.
+
+Keep proposed results and open assumptions explicit. Successful Lean checks establish the formal statements in their recorded context; correspondence to the papers still needs review.
