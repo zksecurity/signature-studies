@@ -1,11 +1,11 @@
 [
   {
     "key": "bls",
-    "revision": "b0b0230a19b0a157522d014bbea205c6098615a0",
+    "revision": "7ee3af67a119db35b9d87f1077d497360efdaab2",
     "lean": "4.34.0",
     "module": "Signatures.BLS.Statement",
     "file": "Signatures/BLS/Statement.lean",
-    "sha256": "abb8456ae0c7888988ba69a7fc1951ba29575177b9cdc72f99672be52ab0c729",
+    "sha256": "bb532a3399f56393ada57c8cc84332d4bf7926b9cc6c084a2d5fc71a85118754",
     "declarations": [
       "BLS.Statement.bls_eufcma_of_cocdh_machine_hardness",
       "BLS.Statement.bls_lazy_agm_of_dlog_machine_hardness"
@@ -15,11 +15,11 @@
   },
   {
     "key": "oops",
-    "revision": "b0b0230a19b0a157522d014bbea205c6098615a0",
+    "revision": "7ee3af67a119db35b9d87f1077d497360efdaab2",
     "lean": "4.34.0",
     "module": "Signatures.OOPS.Statement",
     "file": "Signatures/OOPS/Statement.lean",
-    "sha256": "91f181bc91f10639e29989a8f653da61ac192d1d619e5a9f21b5069ef65a73e2",
+    "sha256": "a23802cd72d8e2cf7a41c9a522ba164bd67242f01d11e887b6d753c41d2b6542",
     "declarations": [
       "OOPS.Statement.oops_lazy_agm_of_dlog_machine_hardness"
     ],
@@ -28,11 +28,11 @@
   },
   {
     "key": "proximity",
-    "revision": "b0b0230a19b0a157522d014bbea205c6098615a0",
+    "revision": "7ee3af67a119db35b9d87f1077d497360efdaab2",
     "lean": "4.34.0",
     "module": "Signatures.Proximity.Statement",
     "file": "Signatures/Proximity/Statement.lean",
-    "sha256": "726efd4184ecb0d669d5c8b05b9e7d6895a1aff0cb035dce190b8e0e79821fd2",
+    "sha256": "2ab401bb23dd67cbbf7b13064ef39eef96dcc8022bdeddc16a268f75795bb53b",
     "declarations": [
       "Proximity.Statement.proximity_lazy_agm_of_dlog_machine_hardness"
     ],
