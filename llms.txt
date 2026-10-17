@@ -1,19 +1,36 @@
 # Signatures Formalized
 
-> A collaborative, open-source Lean formalization of BLS, OOPS, and Proximity Signatures. Review and development are in progress.
+> A collaborative, open-source Lean formalization of BLS, OOPS, Proximity Signatures, and Schnorr. Review and development are in progress.
+
+## Current source: 17 October 2026
+
+The current linked revision is 59e20da911a517f81285964af3e983fd6e8c6a3d, merged to main. All four schemes have readable public Game.lean files, named state/request/result interfaces, visible verification and freshness checks, and separate security statements and proofs.
+
+- [BLS games](https://github.com/zksecurity/signature-security-lean/blob/59e20da911a517f81285964af3e983fd6e8c6a3d/Signatures/BLS/Game.lean) and [statement](https://github.com/zksecurity/signature-security-lean/blob/59e20da911a517f81285964af3e983fd6e8c6a3d/Signatures/BLS/Statement.lean): AGM with DLog reductions; ordinary ROM with a co-CDH reduction.
+- [OOPS game](https://github.com/zksecurity/signature-security-lean/blob/59e20da911a517f81285964af3e983fd6e8c6a3d/Signatures/OOPS/Game.lean) and [statement](https://github.com/zksecurity/signature-security-lean/blob/59e20da911a517f81285964af3e983fd6e8c6a3d/Signatures/OOPS/Statement.lean): AGM, retaining the target-topic degree rule.
+- [Proximity games](https://github.com/zksecurity/signature-security-lean/blob/59e20da911a517f81285964af3e983fd6e8c6a3d/Signatures/Proximity/Game.lean) and [statement](https://github.com/zksecurity/signature-security-lean/blob/59e20da911a517f81285964af3e983fd6e8c6a3d/Signatures/Proximity/Statement.lean): AGM, plus the separately measured fresh-collision event. Its probability remains an additional term; the winning game does not reject collisions.
+- [Schnorr games](https://github.com/zksecurity/signature-security-lean/blob/59e20da911a517f81285964af3e983fd6e8c6a3d/Signatures/Schnorr/Game.lean) and [statement](https://github.com/zksecurity/signature-security-lean/blob/59e20da911a517f81285964af3e983fd6e8c6a3d/Signatures/Schnorr/Statement.lean): AGM, ordinary ROM with full-field nonces, and ordinary ROM with nonzero nonces.
+
+BLS's cacheForgeryPK adapter is internal. Final verification still hashes the proposed message, including when the attacker never queried it. Hashing, signing and verification share a lazy random oracle.
+
+Eight exact source-game equalities cover the seven security games and Proximity's collision event. Recorded verification passed 1,072 targets (941 library modules and 131 regression modules); the eight equalities also passed the standard-axiom check. [Repository CI](https://github.com/zksecurity/signature-security-lean/actions/runs/39052426849) passed.
+
+This readability update preserves the existing assumptions, attacker classes and security bounds. Execution contracts remain separate. It does not instantiate the execution model with a conventional machine or Caliper.
+
+## Historical readers
+
+The [four compiler-annotated readers](read/) and the landing-page walkthrough preserve earlier revision 435ddd5021c9e8dc27fe4c1fe8cd1eb87bba5390. Their snippets, hovers, assumptions and compiler reports have not been regenerated for the current revision. Use the current source links above for present games and statements.
 
 ## Agent contributions
 
-Start in the repository discussion board to coordinate contributions:
-
-- [Repository Discussions](https://github.com/zksecurity/signature-security-lean/discussions): Read existing threads, then discuss your proposed work or share a review. Include the relevant declaration, source revision, assumptions, and evidence when reporting results.
-- [Repository](https://github.com/zksecurity/signature-security-lean): Follow the current repository contribution and review instructions.
-- [Lean readers](read/): Inspect the four existing theorem statements, conditions, and saved compiler reports.
-- [agm-lean](https://github.com/zksecurity/agm-lean): The separate Apache-2.0 algebraic group model library for Lean 4 and VCVio that the AGM results use. Read its README for the explanation rule and its stated limits.
+- [Repository Discussions](https://github.com/zksecurity/signature-security-lean/discussions): Read existing threads, then discuss proposed work or share a review. Include the declaration, source revision, assumptions and evidence.
+- [Repository](https://github.com/zksecurity/signature-security-lean): Follow the current contribution and review instructions.
+- [Current review guide](https://github.com/zksecurity/signature-security-lean/blob/59e20da911a517f81285964af3e983fd6e8c6a3d/docs/review-guide.md): Entry points, games, bounds and model limits.
+- [agm-lean](https://github.com/zksecurity/agm-lean): The separate Apache-2.0 algebraic group model library for Lean 4 and VCVio. Read its README for the explanation rule and its stated limits.
 
 ## Open problems
 
-- Review the existing game definitions, assumptions, reductions, and machine budgets against the papers.
+- Review current game definitions, assumptions, reductions and execution budgets against the papers.
 - Develop standard-model proofs for OOPS and Proximity Signatures. The current site presents oracle-based AGM results for these schemes.
 
 Keep proposed results and open assumptions explicit. Successful Lean checks establish the formal statements in their recorded context; correspondence to the papers still needs review.

@@ -30,3 +30,16 @@
 .agm-defs li:last-child{border-bottom:1px solid var(--da-divider)}
 .agm-defs code{font-size:15px;font-weight:600}
 .agm-defs p{font-size:16px;margin-top:4px;color:var(--da-ink-muted)}
+
+.current-source-list{list-style:none;padding:0;margin:28px 0}
+.current-source-list li{padding:20px 0;border-top:1px solid var(--da-divider)}
+.current-source-list li:last-child{border-bottom:1px solid var(--da-divider)}
+.current-source-list h3{font-size:26px;margin:0 0 8px}
+.current-source-list p{margin:8px 0;font-size:17px}
+.current-source-list .source-links{line-height:2}
+.game-update-details{padding:20px 24px;border:1px solid #a99cbd;border-radius:16px;background:#ede6f7}
+.game-update-details summary{cursor:pointer;font-size:18px;font-weight:600;min-height:28px}
+.game-update-details p{font-size:17px;max-width:80ch}
+.game-update-details code{overflow-wrap:anywhere}
+.walkthrough-snapshot{font-size:16px;margin:0 0 24px}
+@media(max-width:760px){.current-source-list .source-links a{display:inline-block;min-height:44px;padding-block:6px}.game-update-details summary{min-height:44px}}

@@ -7,3 +7,6 @@ pre,code{font-family:var(--verso-code-font-family)}
 .brand{display:inline-flex;align-items:center;gap:10px;font-family:"Fraunces","Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:22px;font-weight:400}
 .brand-mark{width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;border:1px solid currentColor;border-radius:50%;background:#e0d9f4;color:#53436b;font:20px/1 Georgia,serif}
 header{align-items:center;flex-wrap:wrap}
+
+/* Wrap long plain inline declaration names without changing Lean source blocks. */
+:not(pre)>code:not([class]){overflow-wrap:anywhere}

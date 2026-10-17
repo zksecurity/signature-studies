@@ -53,7 +53,7 @@ const routes = {
     base: `${math('H of some k and s',hash(mi('some')+tuple(mi('k')),s))} for each coordinate k, and ${math('H of none and s',hash(mi('none'),s))}`, signInput: 'vector m in slot s', sign: math('alpha times the quantity H of none and s plus the sum over k of m k times H of some k and s',scale(alpha,`<mrow><mo>(</mo>${proximitySum}<mo>)</mo></mrow>`)), target: 'a fresh vector/slot pair (m*, s*)',
   }
 };
-// Each step links to the Lean definition it describes, at the revision the theorems were checked at.
+// Historical walkthrough: preserve links to the earlier 435ddd5 source snapshot.
 const sourceBase = 'https://github.com/zksecurity/signature-security-lean/blob/435ddd5021c9e8dc27fe4c1fe8cd1eb87bba5390/Signatures/';
 const lean = (label, file, from, to) => ({ label, href: `${sourceBase}${file}#L${from}-L${to}` });
 const agmModel = 'Model/LazyAGM.lean', cocdhGame = 'BLS/CoCDH/Spec/LazyGame.lean';
@@ -77,7 +77,7 @@ const stepSources = routeKey => routeKey === 'bls-cocdh' ? [
     ...(routeKey === 'oops' ? [lean('OOPS.admissible', 'OOPS/Spec/LazyAGM.lean', 20, 25)] : routeKey === 'proximity' ? [lean('Proximity.Collision', 'Proximity/Spec/LazyAGM.lean', 28, 36)] : []),
     lean('goodReduction and badReduction', agmModel, 37, 70)]
 ];
-const sourceLinks = links => `<p class="step-source">Formalization: ${links.map(link => `<a href="${link.href}">${link.label} ↗</a>`).join(' · ')}</p>`;
+const sourceLinks = links => `<p class="step-source">Earlier source (435ddd5): ${links.map(link => `<a href="${link.href}">${link.label} ↗</a>`).join(' · ')}</p>`;
 let gameRoute = 'bls-agm';
 let gameStep = 0;
 function agmExtraction() {
