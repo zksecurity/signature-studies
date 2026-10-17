@@ -1,1 +1,0 @@
-'OOPS.Statement.oops_lazy_agm_of_dlog_machine_hardness' depends on axioms: [propext, Classical.choice, Quot.sound]

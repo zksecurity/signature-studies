@@ -1,2 +1,0 @@
-'BLS.Statement.bls_eufcma_of_cocdh_machine_hardness' depends on axioms: [propext, Classical.choice, Quot.sound]
-'BLS.Statement.bls_lazy_agm_of_dlog_machine_hardness' depends on axioms: [propext, Classical.choice, Quot.sound]

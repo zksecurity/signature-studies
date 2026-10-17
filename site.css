@@ -1,20 +1,3 @@
-/* Center the manual walkthrough; keep technical text left-aligned. */
-.security-walkthrough{max-width:900px;margin-inline:auto}
-.security-walkthrough>h2{text-align:center;font-size:clamp(28px,4vw,44px);margin-bottom:28px}
-.security-walkthrough>.tabs{margin-inline:auto;justify-content:center}
-.hardness-challenge{padding:22px 24px;margin-bottom:28px;border:1px solid #a99cbd;border-radius:18px;background:#ede6f7}
-.hardness-challenge h3{font-size:23px;margin-bottom:18px}
-.hardness-challenge dl{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:20px;margin:0 0 16px}
-.hardness-challenge dt{font-size:14px;color:var(--da-ink-muted);margin-bottom:8px}
-.hardness-challenge dd{margin:0;overflow-x:auto;padding:3px 0}
-.hardness-challenge p,.extraction-equation p{font-size:15px;color:var(--da-ink-muted)}
-.hardness-challenge math{font-size:1.1em}
-.security-walkthrough .code-line{overflow-x:auto}
-.extraction-equation{margin-top:18px}
-.transcript .step-source{font-size:14px;margin:10px 0 0}
-.extraction-equation h4{font-size:22px;margin:24px 0 12px}
-@media(max-width:600px){.hardness-challenge dl{grid-template-columns:1fr}.hardness-challenge{padding:20px}}
-.security-walkthrough .game-layout{grid-template-columns:minmax(0,1fr);gap:28px}
 .open-problems{max-width:900px;margin-inline:auto}
 .open-problems ul{padding-left:24px;margin:28px 0 0}
 .open-problems li+li{margin-top:28px}
@@ -41,5 +24,4 @@
 .game-update-details summary{cursor:pointer;font-size:18px;font-weight:600;min-height:28px}
 .game-update-details p{font-size:17px;max-width:80ch}
 .game-update-details code{overflow-wrap:anywhere}
-.walkthrough-snapshot{font-size:16px;margin:0 0 24px}
 @media(max-width:760px){.current-source-list .source-links a{display:inline-block;min-height:44px;padding-block:6px}.game-update-details summary{min-height:44px}}

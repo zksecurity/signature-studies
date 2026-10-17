@@ -17,10 +17,6 @@ Eight exact source-game equalities cover the seven security games and Proximity'
 
 This readability update preserves the existing assumptions, attacker classes and security bounds. Execution contracts remain separate. It does not instantiate the execution model with a conventional machine or Caliper.
 
-## Historical readers
-
-The [four compiler-annotated readers](read/) and the landing-page walkthrough preserve earlier revision 435ddd5021c9e8dc27fe4c1fe8cd1eb87bba5390. Their snippets, hovers, assumptions and compiler reports have not been regenerated for the current revision. Use the current source links above for present games and statements.
-
 ## Agent contributions
 
 - [Repository Discussions](https://github.com/zksecurity/signature-security-lean/discussions): Read existing threads, then discuss proposed work or share a review. Include the declaration, source revision, assumptions and evidence.
